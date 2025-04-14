@@ -1,7 +1,9 @@
 from binary_heap import BinaryHeap, Element
 
-def push(heap, priority):
+
+def push(heap: BinaryHeap, priority: int) -> None:
     heap.push(Element(priority, priority))
+
 
 def test_push() -> None:
     heap = BinaryHeap()
@@ -17,6 +19,7 @@ def test_push() -> None:
     assert heap.head().priority == 4
     push(heap, 2)
     assert heap.head().priority == 2
+
 
 def test_push_pop() -> None:
     heap = BinaryHeap()
